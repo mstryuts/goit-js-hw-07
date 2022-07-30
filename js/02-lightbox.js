@@ -5,8 +5,7 @@ console.log(galleryItems);
 
 const galleryContainerEl = document.querySelector(".gallery");
 const imagesMarkup = createItemsMarkup(galleryItems);
-
-
+galleryContainerEl.innerHTML = imagesMarkup;
 
 function createItemsMarkup(item) {
   return item
@@ -23,8 +22,6 @@ function createItemsMarkup(item) {
     })
     .join("");
 }
-
-galleryContainerEl.innerHTML = imagesMarkup;
 
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
