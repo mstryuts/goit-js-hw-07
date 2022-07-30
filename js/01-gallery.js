@@ -29,9 +29,7 @@ const onGalleryContainerClick = (e) => {
   e.preventDefault();
 
   if (e.target.classList.contains("gallery")) return;
-  console.log(e.target.dataset.source)
-    
-    
+
     const instance = basicLightbox.create(`
     <img src="${e.target.dataset.source}"width="800" height="600">`);
 
